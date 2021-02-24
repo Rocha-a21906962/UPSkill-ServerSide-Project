@@ -7,5 +7,4 @@ admin.site.register(Genre)
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    # TODO: Como concatenar e o que por!
-    prepopulated_fields = {'slug': ('title',)}
+    fields = ('title', 'year', 'genres', 'image', 'actors', 'directors')
