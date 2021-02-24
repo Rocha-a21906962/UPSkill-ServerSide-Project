@@ -14,7 +14,7 @@ class Genre(models.Model):
     class Meta:
         pass
 
-
+# TODO: Como tirar rating daqui!
 class Movie(models.Model):
     SCORE = [(i, i) for i in range(11)]
     id = models.AutoField(primary_key=True)
