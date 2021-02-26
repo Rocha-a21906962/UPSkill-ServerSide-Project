@@ -9,8 +9,8 @@
 </head>
 <body>
 <div class="nav">
-    <div class="nav-link"><a href="">Homepage</a></div>
-    <div class="nav-link"><a href="">Movies</a></div>
+    <div class="nav-link"><a href="{% url 'homepage:homepage' %}">Homepage</a></div>
+    <div class="nav-link"><a href="{% url 'movie:movie_list' %}">Movies</a></div>
     <form method="get" action="{% url 'movie:movie_search' %}" accept-charset="UTF-8">
         {{ search_form }}
         <button type="submit" value="Submit">
