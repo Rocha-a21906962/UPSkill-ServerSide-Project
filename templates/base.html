@@ -8,11 +8,17 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-    <div class="nav">
-                 <div class="nav-link"><a href="">Homepage</a></div>
-                 <div class="nav-link"><a href="">Movies</a></div>
-                 <div class="nav-link" id="about"><a href="">About</a></div>
-    </div>
+<div class="nav">
+    <div class="nav-link"><a href="">Homepage</a></div>
+    <div class="nav-link"><a href="">Movies</a></div>
+    <form method="get" action="{% url 'movie:movie_search' %}" accept-charset="UTF-8">
+        {{ search_form }}
+        <button type="submit" value="Submit">
+            <i class="fa fa-search"></i>
+        </button>
+    </form>
+    <div class="nav-link" id="about"><a href="">About</a></div>
+</div>
 {% block content %}{% endblock %}
 </body>
 </html>

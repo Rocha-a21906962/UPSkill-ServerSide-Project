@@ -7,4 +7,5 @@ admin.site.register(Genre)
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    fields = ('title', 'year', 'genres', 'image', 'actors', 'directors')
+    prepopulated_fields = {'slug': ('title', 'year')}
+    fields = ('title', 'slug', 'year', 'genres', 'image', 'actors', 'directors')
